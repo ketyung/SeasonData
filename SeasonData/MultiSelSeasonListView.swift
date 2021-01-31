@@ -11,7 +11,6 @@ struct MultiSelSeasonListView : View {
     
     @ObservedObject var seasonData = SeasonData()
   
-    @ObservedObject var selectedData = SeasonData()
     
     
     var body: some View {
@@ -28,7 +27,7 @@ struct MultiSelSeasonListView : View {
                 listViewOfSeasonData()
                 
                 NavigationLink(
-                    destination: MultiSeasonDisplayView(selectedData: selectedData)){
+                    destination: MultiSeasonDisplayView(selectedData : seasonData)){
                     
                     Text("View Selections")
                 }
@@ -53,13 +52,13 @@ extension MultiSelSeasonListView {
             
             Button(action: {
       
-                if selectedData.isSelected(id: season.id ){
+                if seasonData.isSelected(id: season.id ){
               
-                    selectedData.removeFromSelectedData(id: season.id)
+                    seasonData.removeFromSelectedData(id: season.id)
                 }
                 else {
           
-                    selectedData.addToSelectedData(ModelData(id : season.id , name : season.name ,issues: season.issues, recordingNames: season.recordingNames))
+                    seasonData.addToSelectedData(ModelData(id : season.id , name : season.name ,issues: season.issues, recordingNames: season.recordingNames))
               
                 }
                 
@@ -71,7 +70,7 @@ extension MultiSelSeasonListView {
                     .frame(width: 180, height: 50, alignment:.leading)
                     .font(.headline)
                     
-                    if selectedData.isSelected(id: season.id){
+                    if seasonData.isSelected(id: season.id){
                         
                         Image(systemName: "checkmark.circle")
                     }
