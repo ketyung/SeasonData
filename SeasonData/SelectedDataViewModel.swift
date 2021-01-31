@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+struct SelectedData {
+    
+    var name : String = ""
+    var issues: [String]
+    var recordingNames: [String]
+}
+
 
 class SelectedDataViewModel : ObservableObject {
     

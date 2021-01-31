@@ -8,13 +8,6 @@
 import SwiftUI
 
 
-struct SelectedData {
-    
-    var name : String = ""
-    var issues: [String]
-    var recordingNames: [String]
-}
-
 struct SeasonListView  : View {
     
     @ObservedObject var seasonData = SeasonData()
