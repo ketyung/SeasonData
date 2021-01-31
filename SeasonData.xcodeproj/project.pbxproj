@@ -15,6 +15,8 @@
 		10EB2A0925C6464B002D250E /* SeasonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB2A0825C6464B002D250E /* SeasonData.swift */; };
 		10EB2A0C25C64657002D250E /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB2A0B25C64657002D250E /* ModelData.swift */; };
 		10EB2A1225C67352002D250E /* ListViewForRecordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB2A1125C67352002D250E /* ListViewForRecordings.swift */; };
+		10EB2A1625C683E4002D250E /* SeasonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB2A1525C683E4002D250E /* SeasonListView.swift */; };
+		10EB2A1925C684C3002D250E /* SeasonDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB2A1825C684C3002D250E /* SeasonDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		10EB2A0825C6464B002D250E /* SeasonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonData.swift; sourceTree = "<group>"; };
 		10EB2A0B25C64657002D250E /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		10EB2A1125C67352002D250E /* ListViewForRecordings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewForRecordings.swift; sourceTree = "<group>"; };
+		10EB2A1525C683E4002D250E /* SeasonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListView.swift; sourceTree = "<group>"; };
+		10EB2A1825C684C3002D250E /* SeasonDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				10EB2A0B25C64657002D250E /* ModelData.swift */,
 				10EB2A0525C64641002D250E /* SeasonData.json */,
 				10EB29F725C6462F002D250E /* ContentView.swift */,
+				10EB2A1525C683E4002D250E /* SeasonListView.swift */,
+				10EB2A1825C684C3002D250E /* SeasonDataView.swift */,
 				10EB2A1125C67352002D250E /* ListViewForRecordings.swift */,
 				10EB29F925C64632002D250E /* Assets.xcassets */,
 				10EB29FE25C64632002D250E /* Info.plist */,
@@ -151,11 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10EB2A1925C684C3002D250E /* SeasonDataView.swift in Sources */,
 				10EB2A1225C67352002D250E /* ListViewForRecordings.swift in Sources */,
 				10EB29F825C6462F002D250E /* ContentView.swift in Sources */,
 				10EB2A0C25C64657002D250E /* ModelData.swift in Sources */,
 				10EB2A0925C6464B002D250E /* SeasonData.swift in Sources */,
 				10EB29F625C6462F002D250E /* SeasonDataApp.swift in Sources */,
+				10EB2A1625C683E4002D250E /* SeasonListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
