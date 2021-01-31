@@ -12,7 +12,8 @@ struct SeasonDataApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            SeasonListView()
+           // SeasonListView()
+            MultiSelSeasonListView()
         }
     }
 }

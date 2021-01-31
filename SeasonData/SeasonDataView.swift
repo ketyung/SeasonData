@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SeasonDataView : View {
     
-    var seletedData : SelecetedData
+    var seletedData : SelectedData
     
     var body: some View {
         

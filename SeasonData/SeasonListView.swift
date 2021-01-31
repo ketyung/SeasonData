@@ -8,8 +8,9 @@
 import SwiftUI
 
 
-struct SelecetedData {
+struct SelectedData {
     
+    var name : String = ""
     var issues: [String]
     var recordingNames: [String]
 }
@@ -27,7 +28,7 @@ struct SeasonListView  : View {
            
                     NavigationLink (
                     destination:
-                        SeasonDataView(seletedData: SelecetedData(issues: season.issues, recordingNames: season.recordingNames) ) ){
+                        SeasonDataView(seletedData: SelectedData(issues: season.issues, recordingNames: season.recordingNames) ) ){
                    
                         Text(season.name)
                     }
