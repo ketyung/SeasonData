@@ -14,10 +14,10 @@ struct MultiSeasonDisplayView : View {
     var body: some View {
         // let _ = print("\(selectedData.ids())")
         
-        List(selectedData.ids(), id: \.self){
+        List(selectedData.selectedIds(), id: \.self){
             dataId in
             
-            if let data = selectedData.data(id: dataId ){
+            if let data = selectedData.dataInSelected(id: dataId ){
                 
                 VStack (alignment: .leading, spacing: 20){
                     

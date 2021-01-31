@@ -83,18 +83,18 @@ final class SeasonData: ObservableObject {
         return selectedData.keys.contains(id)
     }
     
-    func clearAll(){
+    func clearAllSelected(){
         
         selectedData.removeAll()
     }
     
     
-    func data(id : Int ) -> ModelData? {
+    func dataInSelected(id : Int ) -> ModelData? {
         
         return selectedData[id]
     }
     
-    func ids() -> [Int] {
+    func selectedIds() -> [Int] {
         
         let ids = selectedData.keys.map { $0 }
         return ids
