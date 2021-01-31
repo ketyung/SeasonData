@@ -8,9 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    @ObservedObject var seasonData = SeasonData()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+   
+        List(seasonData.features){
+            season in
+            
+            VStack(alignment:.leading, spacing : 10) {
+            
+                Text(season.name)
+                    .font(.headline)
+                HStack {
+                
+                    ForEach(season.recordingNames, id:\.self){
+                        recording in
+                        
+                        Text(recording)
+                            .font(.caption)
+                        
+                    }
+                }
+                
+                
+            }
+            
+            
+        }
     }
 }
 
