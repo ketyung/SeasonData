@@ -58,7 +58,7 @@ extension MultiSelSeasonListView {
                 }
                 else {
           
-                    seasonData.addToSelectedData(ModelData(id : season.id , name : season.name ,issues: season.issues, recordingNames: season.recordingNames))
+                    seasonData.addToSelectedData(season)
               
                 }
                 

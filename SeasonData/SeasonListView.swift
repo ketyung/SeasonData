@@ -21,7 +21,7 @@ struct SeasonListView  : View {
            
                     NavigationLink (
                     destination:
-                        SeasonDataView(seletedData: SelectedData(issues: season.issues, recordingNames: season.recordingNames) ) ){
+                        SeasonDataView(seletedData: season) ){
                    
                         Text(season.name)
                     }
