@@ -16,12 +16,12 @@ struct ModelData: Hashable, Codable, Identifiable {
     var name: String
     var issues: [String]
     var recordingNames: [String]
-    var country : [String]
-    var imageNames : [String]
-    var seasons : [String]
+    var country : [String] = []
+    var imageNames : [String] = []
+    var seasons : [String] = []
     
-    var color: String
-    var isPageView: Bool
+    var color: String = ""
+    var isPageView: Bool = false 
    
     /** Are these keys needed , seasonName and imageName NOT found in JSON file
         Therefore I put them as optional
@@ -46,5 +46,14 @@ struct ModelData: Hashable, Codable, Identifiable {
     
     var featureImage: Image? {
         isPageView ? Image((imageName ?? "") + "_feature") : nil
+    }
+    
+    
+    init (id : Int , name : String , issues : [String], recordingNames : [String]){
+        
+        self.id = id
+        self.name = name
+        self.issues = issues
+        self.recordingNames = recordingNames
     }
 }

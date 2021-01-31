@@ -38,6 +38,9 @@ final class SeasonData: ObservableObject {
     
     @Published var seasondata = Bundle.main.decodeJson([ModelData].self, fileName: "SeasonData.json")
     
+    @Published private var selectedData : [Int : ModelData] = [:]
+   
+    
     var features: [ModelData] {
         seasondata.filter { $0.isPageView }
     }
@@ -59,4 +62,41 @@ final class SeasonData: ObservableObject {
         return str 
     }
     
+    
+    
+    func addToSelectedData(_ data : ModelData){
+        
+        if !selectedData.keys.contains( data.id ){
+            
+            selectedData[data.id] = data
+        }
+    }
+    
+    func removeFromSelectedData (id : Int ){
+        
+        selectedData.removeValue(forKey: id)
+    }
+    
+    
+    func isSelected(id : Int ) -> Bool {
+        
+        return selectedData.keys.contains(id)
+    }
+    
+    func clearAll(){
+        
+        selectedData.removeAll()
+    }
+    
+    
+    func data(id : Int ) -> ModelData? {
+        
+        return selectedData[id]
+    }
+    
+    func ids() -> [Int] {
+        
+        let ids = selectedData.keys.map { $0 }
+        return ids
+    }
 }

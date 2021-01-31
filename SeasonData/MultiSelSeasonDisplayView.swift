@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MultiSeasonDisplayView : View {
     
-    var selectedData = SelectedDataViewModel()
+    var selectedData = SeasonData()
   
     var body: some View {
         // let _ = print("\(selectedData.ids())")

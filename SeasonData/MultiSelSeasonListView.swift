@@ -11,8 +11,9 @@ struct MultiSelSeasonListView : View {
     
     @ObservedObject var seasonData = SeasonData()
   
-    @ObservedObject var selectedData = SelectedDataViewModel()
-  
+    @ObservedObject var selectedData = SeasonData()
+    
+    
     var body: some View {
         
         NavigationView {
@@ -58,7 +59,7 @@ extension MultiSelSeasonListView {
                 }
                 else {
           
-                    selectedData.addToSelectedData(id: season.id, data: SelectedData(name : season.name ,issues: season.issues, recordingNames: season.recordingNames))
+                    selectedData.addToSelectedData(ModelData(id : season.id , name : season.name ,issues: season.issues, recordingNames: season.recordingNames))
               
                 }
                 
