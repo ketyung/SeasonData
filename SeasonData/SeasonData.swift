@@ -49,4 +49,14 @@ final class SeasonData: ObservableObject {
         )
     }
     
+    
+    var recordings : [[String]] {
+        
+        var str : [[String]] = [[]]
+        seasondata.forEach{
+            str.append($0.recordingNames)
+        }
+        return str 
+    }
+    
 }
