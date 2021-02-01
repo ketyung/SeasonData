@@ -14,22 +14,20 @@ struct MultiSeasonDisplayView : View {
     var body: some View {
         // let _ = print("\(selectedData.ids())")
         
-        List(selectedData.selectedIds(), id: \.self){
-            dataId in
+        List(selectedData.selectedValues(), id: \.id){
+            model in
             
-            if let data = selectedData.dataInSelected(id: dataId ){
+            VStack (alignment: .leading, spacing: 20){
                 
-                VStack (alignment: .leading, spacing: 20){
-                    
-                    Text("Item \(dataId) : \(data.name)")
-                        .font(.headline)
-                    
-                    itemScrollView(itemName: "Recordings", items: data.recordingNames)
-                    
-                    itemScrollView(itemName: "Issues", items: data.issues, textBackgroundColor: .orange)
-                }
+                Text("Item \(model.id) : \(model.name)")
+                    .font(.headline)
                 
+                itemScrollView(itemName: "Recordings", items: model.recordingNames)
+                
+                itemScrollView(itemName: "Issues", items: model.issues, textBackgroundColor: .orange)
             }
+            
+            
         }
         
     }

@@ -52,15 +52,7 @@ extension MultiSelSeasonListView {
             
             Button(action: {
       
-                if seasonData.isSelected(id: season.id ){
-              
-                    seasonData.removeFromSelectedData(id: season.id)
-                }
-                else {
-          
-                    seasonData.addToSelectedData(season)
-              
-                }
+                seasonData.addToSelectedData(season)
                 
             }, label: {
            

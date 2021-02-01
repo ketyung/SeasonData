@@ -64,11 +64,18 @@ final class SeasonData: ObservableObject {
     
     
     
-    func addToSelectedData(_ data : ModelData){
+    func addToSelectedData(_ data : ModelData, toRemoveIfExists : Bool = true ){
         
         if !selectedData.keys.contains( data.id ){
             
             selectedData[data.id] = data
+        }
+        else {
+            
+            if toRemoveIfExists {
+                
+                selectedData.removeValue(forKey: data.id )
+            }
         }
     }
     
@@ -98,5 +105,12 @@ final class SeasonData: ObservableObject {
         
         let ids = selectedData.keys.map { $0 }
         return ids
+    }
+    
+    
+    func selectedValues() -> [ModelData ]{
+        
+        let models = selectedData.values.map { $0 }
+        return models 
     }
 }
